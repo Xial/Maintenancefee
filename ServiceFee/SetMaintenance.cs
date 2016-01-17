@@ -27,8 +27,6 @@ namespace MaintenanceFee
                     return (int) Math.Round(originalMaintenanceCost*vars.datam.road, 0);
                 case Service.Water:
                     return (int)Math.Round(originalMaintenanceCost * vars.datam.water, 0);
-                
-                
                 default:
                     return originalMaintenanceCost;
                     

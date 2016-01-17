@@ -1,5 +1,4 @@
 using ColossalFramework.Plugins;
-using ICities;
 
 namespace MaintenanceFee
 {
