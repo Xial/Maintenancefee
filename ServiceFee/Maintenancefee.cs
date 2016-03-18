@@ -23,6 +23,8 @@ namespace MaintenanceFee
             group.AddSlider("Police Department:", 0, 1, 0.1f, vars.datam.police, PoliceSlide);
             group.AddSlider("Roads:", 0, 1, 0.1f, vars.datam.road, RoadSlide);
             group.AddSlider("Water:", 0, 1, 0.1f, vars.datam.water, WaterSlide);
+            group.AddSlider("Beautification:", 0, 1, 0.1f, vars.datam.beauty, BeautySlide);
+            group.AddSlider("Monuments:", 0, 1, 0.1f, vars.datam.monument, MonumentSlide);
             group.AddButton("Save", Save);
         }
 
@@ -70,6 +72,15 @@ namespace MaintenanceFee
             vars.datam.education = val;
         }
 
+        private static void BeautySlide(float val)
+        {
+            vars.datam.beauty = val;
+        }
+
+        private static void MonumentSlide(float val)
+        {
+            vars.datam.monument = val;
+        }
         private static void Save()
         {
             try
@@ -114,9 +125,5 @@ namespace MaintenanceFee
         {
             vars.datam = new datamodel();
         }
-
-
-        
-
     }
 }

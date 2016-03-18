@@ -7,7 +7,6 @@ namespace MaintenanceFee
     {
         public datamodel()
         {
-            
             education = 1;
             electricity = 1;
             fire = 1;
@@ -17,6 +16,8 @@ namespace MaintenanceFee
             road = 1;
             transport = 1;
             water = 1;
+            beauty = 1;
+            monument = 1;
         }
         public float education { get; set; }
         public float electricity { get; set; }
@@ -27,6 +28,8 @@ namespace MaintenanceFee
         public float road { get; set; }
         public float transport { get; set; }
         public float water { get; set; }
+        public float beauty { get; set; }
+        public float monument { get; set; }
     }
 
     public static class vars
