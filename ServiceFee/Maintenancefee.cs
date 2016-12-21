@@ -11,7 +11,8 @@ namespace MaintenanceFee
 
         public string Description => "Changes the maintenance fees";
         public delegate void SettingsUiDelegate(UIHelperBase helper);
-        readonly SettingsUiDelegate _uiDelegate = UI.Instance.SettingsUi;
+
+        private readonly SettingsUiDelegate _uiDelegate = UI.Instance.SettingsUi;
 
         public void OnSettingsUI(UIHelperBase helper)
         {
@@ -20,6 +21,7 @@ namespace MaintenanceFee
         
         public void OnEnabled()
         {
+            
             if (File.Exists("Maintenance.xml"))
             {
                 try
@@ -27,24 +29,25 @@ namespace MaintenanceFee
                     var xmlSerializer = new XmlSerializer(typeof(datamodel));
                     using (var streamReader = new StreamReader("Maintenance.xml"))
                     {
-                        vars.datam = (datamodel)xmlSerializer.Deserialize(streamReader);
+                        log.message("exists"); 
+                        Vars.Datam = (datamodel)xmlSerializer.Deserialize(streamReader);
                     }
                 }
                 catch (Exception e)
                 {
                     log.message("Unexpected " + e.GetType().Name + " loading options: " + e.Message + "\n" + e.StackTrace);
-                    vars.datam = new datamodel();
+                    Vars.Datam = new datamodel();
                 }
             }
             else
             {
-                vars.datam = new datamodel();
+                Vars.Datam = new datamodel();
             }
         }
 
         public void OnDisabled()
         {
-            vars.datam = new datamodel();
+            Vars.Datam = new datamodel();
         }
     }
 }
