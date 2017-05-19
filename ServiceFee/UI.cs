@@ -123,8 +123,12 @@ namespace MaintenanceFee
             Sliders.Ship.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Ship*100}%";
 
             Sliders.Plane =
-                (UISlider) panelHelper.AddSlider("Plane:", 0, 1, 0.1f, Vars.Datam.Plane, val => Vars.Datam.Plane = val);
-            Sliders.Plane.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Plane*100}%";
+                (UISlider)panelHelper.AddSlider("Plane:", 0, 1, 0.1f, Vars.Datam.Plane, val => Vars.Datam.Plane = val);
+            Sliders.Plane.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Plane * 100}%";
+
+            Sliders.Taxi = (UISlider)panelHelper.AddSlider("Taxi:", 0, 1, 0.1f, Vars.Datam.Taxi, val => Vars.Datam.Taxi = val);
+            Sliders.Taxi.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Taxi * 100}%";
+
             tabContainer.selectedIndex = 1;
             tabContainer.selectedIndex = 0;
         }

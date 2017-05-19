@@ -21,7 +21,7 @@ namespace MaintenanceFee
                     return (int)Math.Round(originalMaintenanceCost * Vars.Datam.garbage, 0);
                 case Service.HealthCare:
                     return (int)Math.Round(originalMaintenanceCost * Vars.Datam.health, 0);
-                    
+                
                 case Service.PublicTransport:
                     switch (subService)
                     {
@@ -39,6 +39,7 @@ namespace MaintenanceFee
                             return (int)Math.Round(originalMaintenanceCost * Vars.Datam.Plane, 0);
                         case SubService.PublicTransportTaxi:
                             return (int)Math.Round(originalMaintenanceCost * Vars.Datam.Taxi, 0);
+                        
                     }
                     return originalMaintenanceCost;
                 case Service.PoliceDepartment:
