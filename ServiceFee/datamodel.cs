@@ -7,16 +7,16 @@ namespace MaintenanceFee
     {
         public datamodel()
         {
-            education = 1;
-            electricity = 1;
-            fire = 1;
-            garbage = 1;
-            health = 1;
-            police = 1;
-            road = 1;
-            water = 1;
-            beauty = 1;
-            monument = 1;
+            Education = 1;
+            Electricity = 1;
+            Fire = 1;
+            Garbage = 1;
+            Health = 1;
+            Police = 1;
+            Road = 1;
+            Water = 1;
+            Beauty = 1;
+            Monument = 1;
             Bus = 1;
             Tram = 1;
             Metro = 1;
@@ -25,18 +25,20 @@ namespace MaintenanceFee
             Plane = 1;
             Taxi = 1;
             Disaster = 1;
+            MonoRail = 1;
+            Cablecar = 1;
         }
-        public float education { get; set; }
-        public float electricity { get; set; }
-        public float fire { get; set; }
-        public float garbage { get; set; }
-        public float health { get; set; }
-        public float police { get; set; }
-        public float road { get; set; }
+        public float Education { get; set; }
+        public float Electricity { get; set; }
+        public float Fire { get; set; }
+        public float Garbage { get; set; }
+        public float Health { get; set; }
+        public float Police { get; set; }
+        public float Road { get; set; }
         public float Disaster { get; set; }
-        public float water { get; set; }
-        public float beauty { get; set; }
-        public float monument { get; set; }
+        public float Water { get; set; }
+        public float Beauty { get; set; }
+        public float Monument { get; set; }
         public float Bus { get; set; }
         public float Tram { get; set; }
         public float Metro { get; set; }
@@ -44,6 +46,8 @@ namespace MaintenanceFee
         public float Plane { get; set; }
         public float Taxi { get; set; }
         public float Train { get; set; }
+        public float MonoRail { get; set; }
+        public float Cablecar { get; set; }
     }
 
     public static class Vars

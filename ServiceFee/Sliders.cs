@@ -11,6 +11,9 @@ namespace MaintenanceFee
         public static UISlider Ship { get; set; }
         public static UISlider Plane { get; set; }
         public static UISlider Taxi { get; set; }
+        public static UISlider MonoRail { get; set; }
+        public static UISlider Cablecar { get; set; }
+
 
         public static UISlider Beauty { get; set; }
         public static UISlider Disaster { get; set; }
