@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ServiceFee")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Chris")]
+[assembly: AssemblyCompany("Xial")]
 [assembly: AssemblyProduct("ServiceFee")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("CC0 Public Domain")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3d12df35-5a41-4f6b-aba9-7c9f09c8ff80")]
+[assembly: Guid("D8F8D8CD-25C1-4727-B06C-D39C8554BE47")]
 
 // Version information for an assembly consists of the following four values:
 //
