@@ -6,7 +6,7 @@ using ColossalFramework.UI;
 using ICities;
 using UnityEngine;
 
-namespace MaintenanceFee
+namespace MaintenanceFeeX
 {
     public class UI
     {
@@ -124,13 +124,21 @@ namespace MaintenanceFee
                 (UISlider)panelHelper.AddSlider("Plane:", 0, 1, 0.1f, Vars.Datam.Plane, val => Vars.Datam.Plane = val);
             Sliders.Plane.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Plane * 100}%";
 
-            Sliders.Taxi = (UISlider)panelHelper.AddSlider("Taxi:", 0, 1, 0.1f, Vars.Datam.Taxi, val => Vars.Datam.Taxi = val);
+            Sliders.Taxi = 
+				(UISlider)panelHelper.AddSlider("Taxi:", 0, 1, 0.1f, Vars.Datam.Taxi, val => Vars.Datam.Taxi = val);
             Sliders.Taxi.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Taxi * 100}%";
 
-            Sliders.MonoRail = (UISlider)panelHelper.AddSlider("Monorail:", 0, 1, 0.1f, Vars.Datam.MonoRail, val => Vars.Datam.MonoRail = val);
+            Sliders.MonoRail = 
+				(UISlider)panelHelper.AddSlider("Monorail:", 0, 1, 0.1f, Vars.Datam.MonoRail, val => Vars.Datam.MonoRail = val);
             Sliders.MonoRail.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.MonoRail * 100}%";
-            Sliders.Cablecar = (UISlider)panelHelper.AddSlider("Cablecar:", 0, 1, 0.1f, Vars.Datam.Cablecar, val => Vars.Datam.Cablecar = val);
+
+            Sliders.Cablecar = 
+				(UISlider)panelHelper.AddSlider("Cablecar:", 0, 1, 0.1f, Vars.Datam.Cablecar, val => Vars.Datam.Cablecar = val);
             Sliders.Cablecar.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Cablecar * 100}%";
+			
+			Sliders.Tours = 
+				(UISlider)panelHelper.AddSlider("Sightseeing:", 0, 1, 0.1f, Vars.Datam.Tours, val => Vars.Datam.Tours = val);
+            Sliders.Tours.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Tours * 100}%";
 
             tabContainer.selectedIndex = 1;
             tabContainer.selectedIndex = 0;

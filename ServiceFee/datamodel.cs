@@ -1,6 +1,6 @@
 using System;
 
-namespace MaintenanceFee
+namespace MaintenanceFeeX
 {
     [Serializable]
     public class datamodel
@@ -27,6 +27,7 @@ namespace MaintenanceFee
             Disaster = 1;
             MonoRail = 1;
             Cablecar = 1;
+			Tours = 1;
         }
         public float Education { get; set; }
         public float Electricity { get; set; }
@@ -48,6 +49,7 @@ namespace MaintenanceFee
         public float Train { get; set; }
         public float MonoRail { get; set; }
         public float Cablecar { get; set; }
+		public float Tours { get; set; }
     }
 
     public static class Vars

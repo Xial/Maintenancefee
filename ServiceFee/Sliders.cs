@@ -1,6 +1,6 @@
 using ColossalFramework.UI;
 
-namespace MaintenanceFee
+namespace MaintenanceFeeX
 {
     public static class Sliders
     {
@@ -13,6 +13,7 @@ namespace MaintenanceFee
         public static UISlider Taxi { get; set; }
         public static UISlider MonoRail { get; set; }
         public static UISlider Cablecar { get; set; }
+		public static UISlider Tours { get; set; }
 
 
         public static UISlider Beauty { get; set; }

@@ -1,7 +1,7 @@
 ﻿using System;
 using ICities;
 
-namespace MaintenanceFee
+namespace MaintenanceFeeX
 {
     public class SetMaintenance : EconomyExtensionBase
     { 
@@ -42,18 +42,24 @@ namespace MaintenanceFee
                             case SubService.PublicTransportPlane:
                                 return (int) Math.Round(originalMaintenanceCost * Vars.Datam.Plane, 0);
                             case SubService.PublicTransportTaxi:
-                                return (int) Math.Round(originalMaintenanceCost * Vars.Datam.Taxi, 0);    
+                                return (int) Math.Round(originalMaintenanceCost * Vars.Datam.Taxi, 0);
+                            case SubService.PublicTransportMonorail:
+                                return (int) Math.Round(originalMaintenanceCost * Vars.Datam.MonoRail, 0);
+                            case SubService.PublicTransportCableCar:
+                                return (int) Math.Round(originalMaintenanceCost * Vars.Datam.Cablecar, 0);
+                            case SubService.PublicTransportTours:
+                                return (int) Math.Round(originalMaintenanceCost * Vars.Datam.Tours, 0);    
                         default:
                             // No IEnumerable for Monorail and Cablecar in iCities.dll
                             // 20 = Monorail / 21 = Cablecar
-                            if ((int)subService == 20)
+                            /* if ((int)subService == 20)
                             {
                                 return (int)Math.Round(originalMaintenanceCost * Vars.Datam.MonoRail, 0);
                             }
                             else if ((int) subService == 21)
                             {
                                 return (int)Math.Round(originalMaintenanceCost * Vars.Datam.Cablecar, 0);
-                            }
+                            } */
                             return originalMaintenanceCost;
                         }
                     

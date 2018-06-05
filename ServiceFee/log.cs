@@ -1,6 +1,6 @@
 using ColossalFramework.Plugins;
 
-namespace MaintenanceFee
+namespace MaintenanceFeeX
 {
     public static class log
     {

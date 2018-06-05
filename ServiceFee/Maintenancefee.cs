@@ -3,13 +3,13 @@ using System.IO;
 using System.Xml.Serialization;
 using ICities;
 
-namespace MaintenanceFee
+namespace MaintenanceFeeX
 {
     public class Maintenancefee : IUserMod
     {
-        public string Name => "Maintenance Fee";
+        public string Name => "Maintenance Fee (Parklife Ready)";
 
-        public string Description => "Changes the maintenance fees";
+        public string Description => "Allows adjustment of maintenance fees";
         public delegate void SettingsUiDelegate(UIHelperBase helper);
 
         private readonly SettingsUiDelegate _uiDelegate = UI.Instance.SettingsUi;
@@ -22,12 +22,12 @@ namespace MaintenanceFee
         public void OnEnabled()
         {
             
-            if (File.Exists("Maintenance.xml"))
+            if (File.Exists("MaintenanceX.xml"))
             {
                 try
                 {
                     var xmlSerializer = new XmlSerializer(typeof(datamodel));
-                    using (var streamReader = new StreamReader("Maintenance.xml"))
+                    using (var streamReader = new StreamReader("MaintenanceX.xml"))
                     {
                         log.message("exists"); 
                         Vars.Datam = (datamodel)xmlSerializer.Deserialize(streamReader);
