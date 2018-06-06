@@ -149,7 +149,7 @@ namespace MaintenanceFeeX
             try
             {
                 var xmlSerializer = new XmlSerializer(typeof(datamodel));
-                using (var streamWriter = new StreamWriter("Maintenance.xml"))
+                using (var streamWriter = new StreamWriter("MaintenanceX.xml"))
                 {
                     xmlSerializer.Serialize(streamWriter, Vars.Datam);
                 }
