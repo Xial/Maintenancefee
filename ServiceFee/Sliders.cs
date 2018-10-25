@@ -14,6 +14,7 @@ namespace MaintenanceFeeX
         public static UISlider MonoRail { get; set; }
         public static UISlider Cablecar { get; set; }
 		public static UISlider Tours { get; set; }
+		public static UISlider Industry { get; set; }
 
 
         public static UISlider Beauty { get; set; }

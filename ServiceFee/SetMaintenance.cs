@@ -50,16 +50,6 @@ namespace MaintenanceFeeX
                             case SubService.PublicTransportTours:
                                 return (int) Math.Round(originalMaintenanceCost * Vars.Datam.Tours, 0);    
                         default:
-                            // No IEnumerable for Monorail and Cablecar in iCities.dll
-                            // 20 = Monorail / 21 = Cablecar
-                            /* if ((int)subService == 20)
-                            {
-                                return (int)Math.Round(originalMaintenanceCost * Vars.Datam.MonoRail, 0);
-                            }
-                            else if ((int) subService == 21)
-                            {
-                                return (int)Math.Round(originalMaintenanceCost * Vars.Datam.Cablecar, 0);
-                            } */
                             return originalMaintenanceCost;
                         }
                     
@@ -73,6 +63,8 @@ namespace MaintenanceFeeX
                     return (int) Math.Round(originalMaintenanceCost*Vars.Datam.Beauty, 0);
                 case Service.Monument:
                     return (int) Math.Round(originalMaintenanceCost*Vars.Datam.Monument, 0);
+                case Service.Industrial:
+                    return (int) Math.Round(originalMaintenanceCost*Vars.Datam.Industrial, 0);
                 default:
                     return originalMaintenanceCost;
             }

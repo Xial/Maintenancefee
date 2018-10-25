@@ -139,6 +139,10 @@ namespace MaintenanceFeeX
 			Sliders.Tours =
 				(UISlider)panelHelper.AddSlider("Sightseeing:", 0, 1, 0.05f, Vars.Datam.Tours, val => Vars.Datam.Tours = val);
             Sliders.Tours.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Tours * 100}%";
+			
+			Sliders.Industry =
+				(UISlider)panelHelper.AddSlider("Industry:", 0, 1, 0.05f, Vars.Datam.Industry, val => Vars.Datam.Industry = val);
+            Sliders.Industry.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Industry * 100}%";
 
             tabContainer.selectedIndex = 1;
             tabContainer.selectedIndex = 0;

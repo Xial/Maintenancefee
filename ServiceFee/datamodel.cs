@@ -28,6 +28,7 @@ namespace MaintenanceFeeX
             MonoRail = 1;
             Cablecar = 1;
 			Tours = 1;
+			Industry = 1;
         }
         public float Education { get; set; }
         public float Electricity { get; set; }
@@ -50,6 +51,7 @@ namespace MaintenanceFeeX
         public float MonoRail { get; set; }
         public float Cablecar { get; set; }
 		public float Tours { get; set; }
+		public float Industry { get; set; }
     }
 
     public static class Vars
