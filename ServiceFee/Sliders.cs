@@ -14,8 +14,11 @@ namespace MaintenanceFeeX
         public static UISlider MonoRail { get; set; }
         public static UISlider Cablecar { get; set; }
 		public static UISlider Tours { get; set; }
-		public static UISlider Industry { get; set; }
-
+		public static UISlider IndustrialGeneric { get; set; }
+        public static UISlider IndustrialForestry { get; set; }
+        public static UISlider IndustrialFarming { get; set; }
+        public static UISlider IndustrialOil { get; set; }
+        public static UISlider IndustrialOre { get; set; }
 
         public static UISlider Beauty { get; set; }
         public static UISlider Disaster { get; set; }

@@ -63,8 +63,25 @@ namespace MaintenanceFeeX
                     return (int) Math.Round(originalMaintenanceCost*Vars.Datam.Beauty, 0);
                 case Service.Monument:
                     return (int) Math.Round(originalMaintenanceCost*Vars.Datam.Monument, 0);
+
                 case Service.Industrial:
-                    return (int) Math.Round(originalMaintenanceCost*Vars.Datam.Industrial, 0);
+
+                    switch (subService)
+                    {
+                        case SubService.IndustrialForestry:
+                            return (int)Math.Round(originalMaintenanceCost * Vars.Datam.IndustrialForestry, 0);
+                        case SubService.IndustrialFarming:
+                            return (int)Math.Round(originalMaintenanceCost * Vars.Datam.IndustrialFarming, 0);
+                        case SubService.IndustrialOil:
+                            return (int)Math.Round(originalMaintenanceCost * Vars.Datam.IndustrialOil, 0);
+                        case SubService.IndustrialOre:
+                            return (int)Math.Round(originalMaintenanceCost * Vars.Datam.IndustrialOre, 0);
+                        case SubService.IndustrialGeneric:
+                            return (int)Math.Round(originalMaintenanceCost * Vars.Datam.IndustrialGeneric, 0);
+                        default:
+                            return originalMaintenanceCost;
+                    }
+
                 default:
                     return originalMaintenanceCost;
             }

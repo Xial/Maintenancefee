@@ -30,6 +30,7 @@ namespace MaintenanceFeeX
             addTab(tabStrip, "General");
             addTab(tabStrip, "Services");
             addTab(tabStrip, "Transportation");
+            addTab(tabStrip, "Industrial");
 
             var currentUiPanel = new List<UIPanel>();
 
@@ -42,18 +43,17 @@ namespace MaintenanceFeeX
                 currentUiPanel[i].autoLayoutPadding.left = 5;
                 currentUiPanel[i].autoLayoutPadding.right = 5;
             }
+            // Tab Section 1: General
             var panelHelper = new UIHelper(currentUiPanel[0]);
-
-
+            
             Sliders.Education =
                 (UISlider)
                     panelHelper.AddSlider("Education:", 0, 1, 0.05f, Vars.Datam.Education, val => Vars.Datam.Education = val);
-            Sliders.Education.eventTooltipHover +=
-                (component, param) => component.tooltip = $"{Vars.Datam.Education*100}%";
+            Sliders.Education.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Education*100}%";
+
             Sliders.Electricity =
                 (UISlider)
-                    panelHelper.AddSlider("Electricity:", 0, 1, 0.05f, Vars.Datam.Electricity,
-                        val => Vars.Datam.Electricity = val);
+                    panelHelper.AddSlider("Electricity:", 0, 1, 0.05f, Vars.Datam.Electricity, val => Vars.Datam.Electricity = val);
             Sliders.Electricity.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Electricity*100}%";
 
             Sliders.Garbage =
@@ -65,6 +65,7 @@ namespace MaintenanceFeeX
                 (UISlider)
                     panelHelper.AddSlider("Monuments:", 0, 1, 0.05f, Vars.Datam.Monument, val => Vars.Datam.Monument = val);
             Sliders.Monuments.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Monument * 100}%";
+
             Sliders.Beauty =
                 (UISlider)
                     panelHelper.AddSlider("Parks:", 0, 1, 0.05f, Vars.Datam.Beauty, val => Vars.Datam.Beauty = val);
@@ -79,7 +80,9 @@ namespace MaintenanceFeeX
                     panelHelper.AddSlider("Water Service:", 0, 1, 0.05f, Vars.Datam.Water, val => Vars.Datam.Water = val);
             Sliders.Water.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Water * 100}%";
 
+            // Tab Section 2: Services
             panelHelper = new UIHelper(currentUiPanel[1]);
+
             Sliders.Disaster =
                (UISlider)
                    panelHelper.AddSlider("Disaster:", 0, 1, 0.05f, Vars.Datam.Disaster, val => Vars.Datam.Disaster = val);
@@ -98,8 +101,9 @@ namespace MaintenanceFeeX
                     panelHelper.AddSlider("Police Department:", 0, 1, 0.05f, Vars.Datam.Police, val => Vars.Datam.Police = val);
             Sliders.Police.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Police * 100}%";
 
-
+            // Tab Section 3: Transportation
             panelHelper = new UIHelper(currentUiPanel[2]);
+
             Sliders.Bus =
                 (UISlider) panelHelper.AddSlider("Bus:", 0, 1, 0.05f, Vars.Datam.Bus, val => Vars.Datam.Bus = val);
             Sliders.Bus.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Bus * 100}%";
@@ -139,11 +143,31 @@ namespace MaintenanceFeeX
 			Sliders.Tours =
 				(UISlider)panelHelper.AddSlider("Sightseeing:", 0, 1, 0.05f, Vars.Datam.Tours, val => Vars.Datam.Tours = val);
             Sliders.Tours.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Tours * 100}%";
-			
-			Sliders.Industry =
-				(UISlider)panelHelper.AddSlider("Industry:", 0, 1, 0.05f, Vars.Datam.Industry, val => Vars.Datam.Industry = val);
-            Sliders.Industry.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.Industry * 100}%";
 
+            // Tab Section 4: Industrial
+            panelHelper = new UIHelper(currentUiPanel[3]);
+
+            Sliders.IndustrialGeneric =
+				(UISlider)panelHelper.AddSlider("Generic Industry:", 0, 1, 0.05f, Vars.Datam.IndustrialGeneric, val => Vars.Datam.IndustrialGeneric = val);
+            Sliders.IndustrialGeneric.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.IndustrialGeneric * 100}%"; 
+
+            Sliders.IndustrialForestry =
+                (UISlider)panelHelper.AddSlider("Forestry:", 0, 1, 0.05f, Vars.Datam.IndustrialForestry, val => Vars.Datam.IndustrialForestry = val);
+            Sliders.IndustrialForestry.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.IndustrialForestry * 100}%";
+
+            Sliders.IndustrialFarming =
+                (UISlider)panelHelper.AddSlider("Farming:", 0, 1, 0.05f, Vars.Datam.IndustrialFarming, val => Vars.Datam.IndustrialFarming = val);
+            Sliders.IndustrialFarming.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.IndustrialFarming * 100}%";
+
+            Sliders.IndustrialOre =
+                (UISlider)panelHelper.AddSlider("Ore:", 0, 1, 0.05f, Vars.Datam.IndustrialOre, val => Vars.Datam.IndustrialOre = val);
+            Sliders.IndustrialOre.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.IndustrialOre * 100}%";
+
+            Sliders.IndustrialOil =
+                (UISlider)panelHelper.AddSlider("Oil:", 0, 1, 0.05f, Vars.Datam.IndustrialOil, val => Vars.Datam.IndustrialOil = val);
+            Sliders.IndustrialOil.eventTooltipHover += (component, param) => component.tooltip = $"{Vars.Datam.IndustrialOil * 100}%";
+
+            tabContainer.selectedIndex = 2;
             tabContainer.selectedIndex = 1;
             tabContainer.selectedIndex = 0;
         }

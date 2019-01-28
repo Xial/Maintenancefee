@@ -7,9 +7,9 @@ namespace MaintenanceFeeX
 {
     public class Maintenancefee : IUserMod
     {
-        public string Name => "Maintenance Fee (Parklife Ready)";
+        public string Name => "Maintenance Fee (Industries Ready)";
 
-        public string Description => "Allows adjustment of maintenance fees";
+        public string Description => "Allows for the adjustment of city maintenance fees for services, transportation, and industry.";
         public delegate void SettingsUiDelegate(UIHelperBase helper);
 
         private readonly SettingsUiDelegate _uiDelegate = UI.Instance.SettingsUi;
